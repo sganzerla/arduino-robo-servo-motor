@@ -63,6 +63,14 @@ Robô desenvolvido com materiais recicláveis numa placa Arduino, com dois micro
 
 ## Funcionamento
 
+Velocidade em que os motores movimentan-se pode ser altera nessa variável
+
+``` 
+// velocidade dos movimentos
+#define VEL_MOVIMENTO 30
+
+```
+
 Declaração do ângulo máximo e mínimo de movimentação dos servos. Se a movimentaçao do motor ficar presa por um ângulo inserido errado ele pode estragar ou impedir a execução correta das outras instruções uma vez que ele aguarda o movimento completo do eixo para seguir com as instruções.
 
 ```
