@@ -3,10 +3,10 @@
 
 // create servo objects
 VarSpeedServo servoOlhos;
-int ANG_MAX_MIN_OLHOS[] = {0, 70};
+int ANG_MAX_MIN_OLHOS[] = {20, 80};
 
 VarSpeedServo servoBoca;
-int ANG_MAX_MIN_BOCA[] = {20, 90};
+int ANG_MAX_MIN_BOCA[] = {100, 140};
 
 // velocidade dos movimentos
 #define VEL_MOVIMENTO 30
@@ -87,7 +87,7 @@ void movimentarOlhosBoca()
 
     emMovimentacao = true;
 
-    for (size_t i = 0; i < 100; i++)
+    for (size_t i = 0; i < 50; i++)
     {
         Serial.println(i);
         /*  (angulo, velocidade, aguarda movimento completo para ir proxima instrucao) */
