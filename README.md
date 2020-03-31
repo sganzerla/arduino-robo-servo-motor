@@ -9,8 +9,13 @@ Robô desenvolvido com materiais recicláveis numa placa Arduino, com dois micro
   <img src="https://user-images.githubusercontent.com/22710963/77988240-33818600-72f2-11ea-90d7-3b26ab14ccb1.png" alt="reset" style="max-width:100%;"></a>
 </p> 
 
- 
-    
+### Circuito 
+  
+  <p>
+ <a target="_blank" rel="noopener noreferrer" href="https://user-images.githubusercontent.com/22710963/78051508-2d23f600-7354-11ea-8805-6b3fff09a7b0.png" target="_blank">
+  <img src="https://user-images.githubusercontent.com/22710963/78051508-2d23f600-7354-11ea-8805-6b3fff09a7b0.png" alt="reset" style="max-width:100%;"></a>
+</p> 
+  
 ## Hardware necessário
 ```
 - a) 1 Placa Arduino com cabo USB
