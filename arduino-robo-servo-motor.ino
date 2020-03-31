@@ -3,13 +3,13 @@
 
 // create servo objects
 VarSpeedServo servoOlhos;
-int ANG_MAX_MIN_OLHOS[] = {30, 50};
+int ANG_MAX_MIN_OLHOS[] = {0, 70};
 
 VarSpeedServo servoBoca;
-int ANG_MAX_MIN_BOCA[] = {50, 90};
+int ANG_MAX_MIN_BOCA[] = {20, 90};
 
 // velocidade dos movimentos
-#define VEL_MOVIMENTO 50
+#define VEL_MOVIMENTO 30
 
 #define SEN_SOM_PIN 11
 
@@ -38,8 +38,10 @@ void loop()
 void setandoPinos()
 {
     // setando pino para servo e definindo grau min e máximo (pino, angulo minimo, angulo maximo)
-    servoOlhos.attach(7, ANG_MAX_MIN_OLHOS[0], ANG_MAX_MIN_OLHOS[1]);
-    servoBoca.attach(5, ANG_MAX_MIN_BOCA[0], ANG_MAX_MIN_BOCA[1]);
+    servoOlhos.attach(7, ANG_MAX_MIN_OLHOS[0], ANG_MAX_MIN_OLHOS[1]); 
+    servoBoca.attach(5, ANG_MAX_MIN_BOCA[0], ANG_MAX_MIN_BOCA[1]); 
+
+    posicionarAnguloInicioServo();
 
     pinMode(SEN_SOM_PIN, INPUT);
 }
@@ -67,7 +69,6 @@ void escutarPalmas()
     // Verifica se nenhuma palma mais pode ser dada
     if (((millis() - esperaPalmas) > intervaloPalmas) && (quantidadePalmas != 0))
     {
-        Serial.println(quantidadePalmas);
         if (quantidadePalmas == 2)
         {
 
@@ -85,15 +86,25 @@ void movimentarOlhosBoca()
     // invoque o método novamente
 
     emMovimentacao = true;
- 
-    for (size_t i = 0; i < 5; i++) {
+
+    for (size_t i = 0; i < 100; i++)
+    {
+        Serial.println(i);
         /*  (angulo, velocidade, aguarda movimento completo para ir proxima instrucao) */
         servoOlhos.write(gerarNumeroRandomico(ANG_MAX_MIN_OLHOS), VEL_MOVIMENTO, true);
         servoBoca.write(gerarNumeroRandomico(ANG_MAX_MIN_BOCA), VEL_MOVIMENTO, true);
     };
 
+    posicionarAnguloInicioServo();
     delay(2000);
     emMovimentacao = false;
+}
+
+void posicionarAnguloInicioServo()
+{
+    // posição de inicio do angulo do servo motor
+    servoOlhos.write(ANG_MAX_MIN_OLHOS[0], VEL_MOVIMENTO, true);
+    servoBoca.write(ANG_MAX_MIN_BOCA[0], VEL_MOVIMENTO, true);
 }
 
 int gerarNumeroRandomico(int vetorMinMax[])
