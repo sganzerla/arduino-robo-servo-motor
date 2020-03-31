@@ -38,7 +38,7 @@ void loop()
 void setandoPinos()
 {
     // setando pino para servo e definindo grau min e máximo (pino, angulo minimo, angulo maximo)
-    servoOlhos.attach(7, ANG_MAX_MIN_OLHOS[0], ANG_MAX_MIN_OLHOS[1]); 
+    servoOlhos.attach(6, ANG_MAX_MIN_OLHOS[0], ANG_MAX_MIN_OLHOS[1]); 
     servoBoca.attach(5, ANG_MAX_MIN_BOCA[0], ANG_MAX_MIN_BOCA[1]); 
 
     posicionarAnguloInicioServo();
