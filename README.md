@@ -22,7 +22,7 @@ Robô desenvolvido com materiais recicláveis numa placa Arduino, com dois micro
 - b) 2 Micro servo motores
 - c) 1 Sensor som ky-038  
 - d) 1 Protoboard
-- h) 20-25 Cabos de conexão   
+- h) 10-15 Cabos de conexão   
 ```
 
  ### a) Placa Arduino Uno 
