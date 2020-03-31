@@ -49,6 +49,18 @@ Robô desenvolvido com materiais recicláveis numa placa Arduino, com dois micro
 <p><a target="_blank" rel="noopener noreferrer" href="https://user-images.githubusercontent.com/22710963/77499606-5662f480-6e31-11ea-96fd-9e268dceb50f.png">
   <img src="https://user-images.githubusercontent.com/22710963/77499606-5662f480-6e31-11ea-96fd-9e268dceb50f.png" alt="reset" style="max-width:100%;"></a></p> 
 
+## Material utilizado para confeccionar a estrutura do robô
+
+- Corpo do Robô: 1  isopor 40x25cm ( veio num gabinete de computador)
+
+- Olhos: 25 cm cano PVC de 40mm para dar movimento com dois parafusos fixados para serem os olhos
+
+- Boca: 1 tampa de pacote de lenço umedecido do tipo abre/fecha
+
+- Arames firmes mas maleáveis: 1m para fixar os servo motores no isopor e para dar a movimentação dos servos aos olhos e a boca
+
+- 3 Prendedores de roupa: as pernas separadas foram utilizadas para passar o arame e fixar os servos ao isopor 
+
 
 ### Links úteis
 
