@@ -63,7 +63,15 @@ Robô desenvolvido com materiais recicláveis numa placa Arduino, com dois micro
 
 ## Funcionamento
 
-Aqui é declarado o angulo máximo e mínimo de movimentação dos servos. Se a movimentaçao do motor ficar presa por um angulo inserido errado ele pode estragar ou impedir a execução correta das outras instruções uma vez que ele aguarda o movimento completo do eixo para seguir com as instruções.
+Velocidade em que os motores movimentan-se pode ser altera nessa variável
+
+``` 
+// velocidade dos movimentos
+#define VEL_MOVIMENTO 30
+
+```
+
+Declaração do ângulo máximo e mínimo de movimentação dos servos. Se a movimentaçao do motor ficar presa por um ângulo inserido errado ele pode estragar ou impedir a execução correta das outras instruções uma vez que ele aguarda o movimento completo do eixo para seguir com as instruções.
 
 ```
 // create servo objects
@@ -73,8 +81,60 @@ int ANG_MAX_MIN_OLHOS[] = {0, 70};
 VarSpeedServo servoBoca;
 int ANG_MAX_MIN_BOCA[] = {20, 90};
 ```
+Ao escutar 2 palmas [...]
+
+``` 
+   
+    if (((millis() - esperaPalmas) > intervaloPalmas) && (quantidadePalmas != 0))
+    {
+        if (quantidadePalmas == 2)
+        {
+
+            movimentarOlhosBoca();
+        }
+
+        delay(delayfinal);    
+        quantidadePalmas = 0;  
+    }
+```
 
 
+[...] o robô vai movimentar-se 100 vezes com ângulos gerados randomicamente, dentro da faixa de limites declarada. 
+
+```
+void movimentarOlhosBoca()
+{
+    // define como verdadeiro para impedir que o ruído do motor do servo
+    // invoque o método novamente
+
+    emMovimentacao = true;
+
+    for (size_t i = 0; i < 100; i++)
+    {
+        Serial.println(i);
+        /*  (angulo, velocidade, aguarda movimento completo para ir proxima instrucao) */
+        servoOlhos.write(gerarNumeroRandomico(ANG_MAX_MIN_OLHOS), VEL_MOVIMENTO, true);
+        servoBoca.write(gerarNumeroRandomico(ANG_MAX_MIN_BOCA), VEL_MOVIMENTO, true);
+    };
+
+    posicionarAnguloInicioServo();
+    delay(2000);
+    emMovimentacao = false;
+}
+
+```
+
+
+Enquanto o robô movimenta-se ele para de ouvir, para que o ruído do motor não acione novamento os movimentos.
+
+```
+void loop()
+{
+    if (!emMovimentacao)
+        escutarPalmas();
+}
+
+```
 
 ### Links úteis
 
