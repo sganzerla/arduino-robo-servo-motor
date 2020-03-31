@@ -12,8 +12,8 @@ Robô desenvolvido com materiais recicláveis numa placa Arduino, com dois micro
 ### Circuito 
   
   <p>
- <a target="_blank" rel="noopener noreferrer" href="https://user-images.githubusercontent.com/22710963/78051508-2d23f600-7354-11ea-8805-6b3fff09a7b0.png" target="_blank">
-  <img src="https://user-images.githubusercontent.com/22710963/78051508-2d23f600-7354-11ea-8805-6b3fff09a7b0.png" alt="reset" style="max-width:100%;"></a>
+ <a target="_blank" rel="noopener noreferrer" href="https://user-images.githubusercontent.com/22710963/78057168-ab849600-735c-11ea-923e-fc8b906a689a.png" target="_blank">
+  <img src="https://user-images.githubusercontent.com/22710963/78057168-ab849600-735c-11ea-923e-fc8b906a689a.png" alt="reset" style="max-width:100%;"></a>
 </p> 
   
 ## Hardware necessário
@@ -60,6 +60,20 @@ Robô desenvolvido com materiais recicláveis numa placa Arduino, com dois micro
 - Arames firmes mas maleáveis: 1m para fixar os servo motores no isopor e para dar a movimentação dos servos aos olhos e a boca
 
 - 3 Prendedores de roupa: as pernas separadas foram utilizadas para passar o arame e fixar os servos ao isopor 
+
+## Funcionamento
+
+Aqui é declarado o angulo máximo e mínimo de movimentação dos servos. Se a movimentaçao do motor ficar presa por um angulo inserido errado ele pode estragar ou impedir a execução correta das outras instruções uma vez que ele aguarda o movimento completo do eixo para seguir com as instruções.
+
+```
+// create servo objects
+VarSpeedServo servoOlhos;
+int ANG_MAX_MIN_OLHOS[] = {0, 70};
+
+VarSpeedServo servoBoca;
+int ANG_MAX_MIN_BOCA[] = {20, 90};
+```
+
 
 
 ### Links úteis
