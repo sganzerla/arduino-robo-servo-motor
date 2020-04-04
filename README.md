@@ -1,7 +1,6 @@
 # arduino-robo-servo-motor 
 
-Robô desenvolvido com materiais recicláveis numa placa Arduino, com dois micro servo motores e uma placa de som KY-038. O robo reage com os olhos e a boca ao som de duas palmas.
-
+Robô desenvolvido com materiais recicláveis em uma placa Arduino, com dois micro servo motores e uma placa de som KY-038. O robô reage com os olhos e a boca ao som de duas palmas.
 
 ### Demonstração (vídeo)
 <p>
