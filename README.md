@@ -62,7 +62,7 @@ Robô desenvolvido com materiais recicláveis em uma placa Arduino, com dois mic
 
 ## Funcionamento
 
-Velocidade em que os motores movimentan-se pode ser altera nessa variável
+Velocidade em que os motores movimentam-se pode ser altera nessa variável
 
 ``` 
 // velocidade dos movimentos
