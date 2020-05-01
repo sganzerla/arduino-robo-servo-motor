@@ -1,54 +1,48 @@
-# arduino-robo-servo-motor 
+# arduino-robo-servo-motor
+
+## Objetivo
 
 Robô desenvolvido com materiais recicláveis em uma placa Arduino, com dois micro servo motores e uma placa de som KY-038. O robô reage com os olhos e a boca ao som de duas palmas.
 
-### Demonstração (vídeo)
-<p>
- <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/NDME2-helR8" target="_blank">
-  <img src="https://user-images.githubusercontent.com/22710963/77988240-33818600-72f2-11ea-90d7-3b26ab14ccb1.png" alt="reset" style="max-width:100%;"></a>
-</p> 
+### Vídeo
 
-### Circuito 
+[![Vídeo](https://user-images.githubusercontent.com/22710963/77988240-33818600-72f2-11ea-90d7-3b26ab14ccb1.png)](https://youtu.be/NDME2-helR8)
+
+### Circuito
   
-  <p>
- <a target="_blank" rel="noopener noreferrer" href="https://user-images.githubusercontent.com/22710963/78057168-ab849600-735c-11ea-923e-fc8b906a689a.png" target="_blank">
-  <img src="https://user-images.githubusercontent.com/22710963/78057168-ab849600-735c-11ea-923e-fc8b906a689a.png" alt="reset" style="max-width:100%;"></a>
-</p> 
+![image](https://user-images.githubusercontent.com/22710963/78057168-ab849600-735c-11ea-923e-fc8b906a689a.png)
   
-## Hardware necessário
+### Hardware necessário
+
 ```
 - a) 1 Placa Arduino com cabo USB
 - b) 2 Micro servo motores
 - c) 1 Sensor som ky-038  
 - d) 1 Protoboard
-- h) 10-15 Cabos de conexão   
+- h) 10-15 Cabos de conexão
 ```
 
- ### a) Placa Arduino Uno 
- 
-<p><a target="_blank" rel="noopener noreferrer" href="https://user-images.githubusercontent.com/22710963/77551422-16cbf500-6e91-11ea-850d-7e3989c9f1f2.png">
-  <img src="https://user-images.githubusercontent.com/22710963/77551422-16cbf500-6e91-11ea-850d-7e3989c9f1f2.png" alt="reset" style="max-width:100%;"></a></p> 
+#### a) Placa Arduino Uno
 
-   
- ### b) Micro servo motores
-  <p><a target="_blank" rel="noopener noreferrer" href="https://user-images.githubusercontent.com/22710963/77988474-d63a0480-72f2-11ea-905d-bb5b899f1170.png">
-  <img src="https://user-images.githubusercontent.com/22710963/77988474-d63a0480-72f2-11ea-905d-bb5b899f1170.png" alt="reset" style="max-width:100%;"></a></p> 
-       
- ### c) Sensor Som KY-038
+![image](https://user-images.githubusercontent.com/22710963/77551422-16cbf500-6e91-11ea-850d-7e3989c9f1f2.png)
+
+#### b) Micro servo motores
+
+![image](https://user-images.githubusercontent.com/22710963/77988474-d63a0480-72f2-11ea-905d-bb5b899f1170.png)
+
+#### c) Sensor Som KY-038
   
-<p><a target="_blank" rel="noopener noreferrer" href="https://user-images.githubusercontent.com/22710963/77604369-14998300-6ef1-11ea-977d-2bbdb8241a28.png">
-  <img src="https://user-images.githubusercontent.com/22710963/77604369-14998300-6ef1-11ea-977d-2bbdb8241a28.png" alt="reset" style="max-width:100%;"></a></p> 
+![image](https://user-images.githubusercontent.com/22710963/77604369-14998300-6ef1-11ea-977d-2bbdb8241a28.png)
 
-  
-  ### d) Protoboard 
-<p><a target="_blank" rel="noopener noreferrer" href="https://user-images.githubusercontent.com/22710963/77499362-a8574a80-6e30-11ea-9744-a15c3206fd50.png">
-  <img src="https://user-images.githubusercontent.com/22710963/77499362-a8574a80-6e30-11ea-9744-a15c3206fd50.png" alt="reset" style="max-width:100%;"></a></p> 
+#### d) Protoboard
 
-  ### e) Cabos de conexão
-<p><a target="_blank" rel="noopener noreferrer" href="https://user-images.githubusercontent.com/22710963/77499606-5662f480-6e31-11ea-96fd-9e268dceb50f.png">
-  <img src="https://user-images.githubusercontent.com/22710963/77499606-5662f480-6e31-11ea-96fd-9e268dceb50f.png" alt="reset" style="max-width:100%;"></a></p> 
+![image](https://user-images.githubusercontent.com/22710963/77499362-a8574a80-6e30-11ea-9744-a15c3206fd50.png)
 
-## Material utilizado para confeccionar a estrutura do robô
+#### e) Cabos de conexão
+
+![image](https://user-images.githubusercontent.com/22710963/77499606-5662f480-6e31-11ea-96fd-9e268dceb50f.png)
+
+### Material utilizado para confeccionar a estrutura do robô
 
 - Corpo do Robô: 1  isopor 40x25cm ( veio num gabinete de computador)
 
@@ -58,11 +52,11 @@ Robô desenvolvido com materiais recicláveis em uma placa Arduino, com dois mic
 
 - Arames firmes mas maleáveis: 1m para fixar os servo motores no isopor e para dar a movimentação dos servos aos olhos e a boca
 
-- 3 Prendedores de roupa: as pernas separadas foram utilizadas para passar o arame e fixar os servos ao isopor 
+- 3 Prendedores de roupa: as pernas separadas foram utilizadas para passar o arame e fixar os servos ao isopor
 
-## Funcionamento
+### Funcionamento
 
-Velocidade em que os motores movimentam-se pode ser altera nessa variável
+Velocidade em que os motores movimentam-se pode ser alterada nessa variável
 
 ``` 
 // velocidade dos movimentos
@@ -83,7 +77,6 @@ int ANG_MAX_MIN_BOCA[] = {20, 90};
 Ao escutar 2 palmas [...]
 
 ``` 
-   
     if (((millis() - esperaPalmas) > intervaloPalmas) && (quantidadePalmas != 0))
     {
         if (quantidadePalmas == 2)
@@ -92,13 +85,12 @@ Ao escutar 2 palmas [...]
             movimentarOlhosBoca();
         }
 
-        delay(delayfinal);    
+        delay(delayfinal);
         quantidadePalmas = 0;  
     }
 ```
 
-
-[...] o robô vai movimentar-se 100 vezes com ângulos gerados randomicamente, dentro da faixa de limites declarada. 
+[...] o robô vai movimentar-se 100 vezes com ângulos gerados randomicamente, dentro da faixa de limites declarada.
 
 ```
 void movimentarOlhosBoca()
@@ -123,8 +115,7 @@ void movimentarOlhosBoca()
 
 ```
 
-
-Enquanto o robô movimenta-se ele para de ouvir, para que o ruído do motor não acione novamento os movimentos.
+Enquanto o robô movimenta-se ele para de ouvir, para que o ruído do motor não acione novamente os movimentos.
 
 ```
 void loop()
@@ -135,26 +126,12 @@ void loop()
 
 ```
 
-### Links úteis
+#### Links úteis
 
-- [IDE Arduino](https://www.arduino.cc/en/Main/Software)
- 
-- [Documentação sintaxe C++](https://www.arduino.cc/reference/en/)
-
-- [Fritzing](https://fritzing.org/home/) - Licença comercial
-
-- [Fritzing](https://softfamous.com/fritzing/download/) - Versão gratuita (antiga mas permite que seja atualizada)
-   
 - [VarSpeedServo](https://github.com/netlabtoolkit/VarSpeedServo) - Biblioteca com controle de velocidade dos movimentos
 
-
-###  Aplicações 
+### Aplicações
 
 - Desenvolver criatividade de crianças e adultos
 
 - Brinquedo infantil
-
-
-
-
-  
